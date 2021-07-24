@@ -26,7 +26,7 @@ export default function Asynchronous({ inputName, list }) {
 
     (async () => {
       if (active) {
-        setOptions(Object.keys(list).map((key) => list[key]));
+        if (list) setOptions(Object.keys(list).map((key) => list[key]));
       }
     })();
 
